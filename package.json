@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "mocha test/*.js",
-    "coverage": "nyc mocha test/*.js"
+    "coverage": "nyc mocha test/*.js",
+    "build": "babel ./lib/* --presets babel-preset-es2015 --out-dir distribution"
   },
   "repository": "jsdom/webidl-conversions",
   "keywords": [
@@ -20,6 +21,8 @@
   "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
   "license": "BSD-2-Clause",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "eslint": "^3.15.0",
     "mocha": "^1.21.4",
     "nyc": "^10.1.2"
